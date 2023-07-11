@@ -35,13 +35,16 @@ public class Program {
 		
 		DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"); //criando mais um modo formatado
 		LocalDateTime d09 = LocalDateTime.parse("20/07/2022 01:30", fmt2);
-		System.out.println(d09);
+		System.out.println("d09: " + d09);
 		
 		LocalDate d10 = LocalDate.of(2022, 7, 20);
 		System.out.println(d10);
 		
 		LocalDateTime d11 = LocalDateTime.of(2022, 7, 20, 1, 30);
 		System.out.println(d11);
+		
+		System.out.println("----");
+		System.out.println();
 	}
 
 }
