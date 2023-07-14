@@ -11,6 +11,11 @@ public class SavingsAccounts extends Account{
 		public void updateBalance() {
 			balance += balance * interestRate; 
 		}
+		
+		@Override //só pra dizer que ofi sobrescrito 
+		public void withdraw(double amount) {
+			balance -= amount;
+		} //REESCREVENDO WITHDRAW 
 
 		public SavingsAccounts(Integer number, String holder, Double balance, Double interestRate) {
 			super(number, holder, balance);

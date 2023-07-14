@@ -13,7 +13,12 @@ public class BusinessAccount extends Account { //extends define que tudo que tem
 		this.loanLimit = loanLimit;
 	}
 	
-
+	@Override
+	public void withdraw(double amount) {
+		super.withdraw(amount); //basicamente usa o código que tá pronto lá no account
+		balance -= 2; //e aqui reduz mais dois ainda
+	}
+	
 	public double getLoanLimit() {
 		return loanLimit;
 	}
@@ -27,8 +32,4 @@ public class BusinessAccount extends Account { //extends define que tudo que tem
 	public void setLoanLimit(double loanLimit) {
 		this.loanLimit = loanLimit;
 	};
-	
-	
-	
-	
 }

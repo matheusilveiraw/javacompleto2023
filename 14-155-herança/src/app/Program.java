@@ -10,6 +10,25 @@ public class Program {
 		//upcasting -> fazer com que uma subclasse suba para classe anterior, nesse caso, businessaccount para account
 		//downcasting -> o oposto do anterior, fazer com que uma classe desça para a próxima, no caso das classes aqui, de account para businessacount 
 		
+		//EXEMPLO DO OVERRIDE NO SAVINGACOUNTS
+		System.out.println("Exemplos override");
+		Account acc10 = new Account(1001, "Alex", 1000.0);
+		acc10.withdraw(200);
+		System.out.println(acc10.getBalance());
+		
+		Account acc11 = new SavingsAccounts(1000, "Maria", 1000.0, 0.01);
+		acc11.withdraw(200);
+		System.out.println(acc11.getBalance());
+		
+		Account acc12 = new BusinessAccount(1000, "Jorge", 1000.0, 0.01);
+		acc12.withdraw(200);
+		System.out.println(acc12.getBalance());
+		
+		//SÓ PARA PROVAR QUE FUNCIONAR SOBRESCREVER
+		
+		System.out.println("=====================");
+		
+		
 		Account acc = new Account(1001, "Alex", 0.0);
 		BusinessAccount bacc = new BusinessAccount(1002, "Maria", 0.0, 500.0);
 		
@@ -31,7 +50,7 @@ public class Program {
 			acc5.loan(200);
 			System.out.println("LOAN1");
 		}
-		
+		 
 		if(acc3 instanceof SavingsAccounts) { 
 			SavingsAccounts acc5 = (SavingsAccounts)acc3;
 			acc5.updateBalance();
