@@ -10,8 +10,19 @@ public class Program {
 		//upcasting -> fazer com que uma subclasse suba para classe anterior, nesse caso, businessaccount para account
 		//downcasting -> o oposto do anterior, fazer com que uma classe desça para a próxima, no caso das classes aqui, de account para businessacount 
 		
+		System.out.println("EXEMPLOS POLIMORFISMO");
+		
+		Account x = new Account(120, "Alex", 1000.0);
+		Account y = new SavingsAccounts(1023, "Maroa", 1000.0, 0.01);
+		
+		y.withdraw(50);
+		x.withdraw(50);
+		
+		System.out.println(x.getBalance());
+		System.out.println(y.getBalance());
+		
 		//EXEMPLO DO OVERRIDE NO SAVINGACOUNTS
-		System.out.println("Exemplos override");
+		System.out.println("EXEMPLOS OVERRIDE");
 		Account acc10 = new Account(1001, "Alex", 1000.0);
 		acc10.withdraw(200);
 		System.out.println(acc10.getBalance());
