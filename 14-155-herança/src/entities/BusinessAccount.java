@@ -1,7 +1,8 @@
 package entities;
 
-public class BusinessAccount extends Account { //extends define que tudo que tem em accoumt eui consigo usar aqui
-	
+public final class BusinessAccount extends Account { //extends define que tudo que tem em accoumt eui consigo usar aqui
+	//final aqui impede que sejam criadas subclasses de savingaccounts, finalizando as ramificações
+
 	private double loanLimit;
 	
 	public BusinessAccount() {

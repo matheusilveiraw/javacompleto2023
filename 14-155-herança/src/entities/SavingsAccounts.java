@@ -13,7 +13,8 @@ public class SavingsAccounts extends Account{
 		}
 		
 		@Override //só pra dizer que ofi sobrescrito 
-		public void withdraw(double amount) {
+		public final void withdraw(double amount) { 
+			//o final impede de ser reescrevido
 			balance -= amount;
 		} //REESCREVENDO WITHDRAW 
 
