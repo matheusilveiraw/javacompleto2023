@@ -73,6 +73,4 @@ public class Program {
 		//essa linha aqui ela é errada pq o meu acc3 é um savingsaccount e o savingaccount e o
 		//businessaccount herdam de account, mas eles são coisas distintas (da erro só na execução)
 	}
-	
-
 }

@@ -12,11 +12,10 @@ public class SavingsAccounts extends Account{
 			balance += balance * interestRate; 
 		}
 		
-		@Override //só pra dizer que ofi sobrescrito 
+		@Override
 		public final void withdraw(double amount) { 
-			//o final impede de ser reescrevido
 			balance -= amount;
-		} //REESCREVENDO WITHDRAW 
+		}
 
 		public SavingsAccounts(Integer number, String holder, Double balance, Double interestRate) {
 			super(number, holder, balance);
