@@ -38,8 +38,6 @@ public class Program {
 			
 			if(productType == 'u') { 
 				System.out.print("Manufacture date (DD/MM/YYYY): ");
-//				sc.nextLine();
-//				String data = sc.nextLine();
 				LocalDate date = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 				
 
