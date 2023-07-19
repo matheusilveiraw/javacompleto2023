@@ -36,6 +36,5 @@ public class Program {
 		for(Account acc : list) {
 			System.out.printf("Update balance for accounbt %d: %.2f%n", acc.getNumber(), acc.getBalance());
 		}
-		
 	}
 }
