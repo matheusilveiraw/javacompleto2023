@@ -40,9 +40,4 @@ public class Product {
 	public String priceTag(Double price) {
 		return this.name + "- $"+ this.price;
 	}
-	
-	
-	//função price tag, entender o que exatamente ela faz
-	
-	
 }
