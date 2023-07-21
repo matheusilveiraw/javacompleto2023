@@ -6,8 +6,22 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
+		method1();
 		
+		System.out.println("Fim do programa!");
+
+	}
+	
+	public static void method1() { 
+		System.out.println("METHOD1 START");
+		method2();
+		System.out.println("METHOD1 END");
+
+	}
+
+	public static void method2() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("METHOD2 START");
 		
 		try {
 	
@@ -16,13 +30,14 @@ public class Program {
 		System.out.println(vect[position]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Invalid Position");
+			e.printStackTrace(); //mostra o erro no console 
 		} catch (InputMismatchException e) {
 			System.out.println("Input error!");
 		}
-		
-		System.out.println("Fim do programa!");
-		
+			
 		sc.close();
-	}
+		System.out.println("METHOD2 END");
 
+	}
+	
 }
