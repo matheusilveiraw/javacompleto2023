@@ -18,12 +18,12 @@ public class Company extends Person {
 	}
 
 	@Override
-	public String finalTax() {
+	public Double finalTax() {
 		if(this.getNumberEmployees() > 10) { 
 //			return this.name + " $" + this.getAnualIncome() * 0.14; 
-			return String.format("%d", this.getAnualIncome() * 0.14);
+			return this.getAnualIncome() * 0.14;
 		}
 //		return this.name + " $" + this.getAnualIncome() * 0.16; 
-		return String.format("%d", this.getAnualIncome() * 0.16);
+		return this.getAnualIncome() * 0.16;
 	}
 }

@@ -3,7 +3,7 @@ package entities;
 public abstract class Person {
 
 		protected String name; 
-		private double anualIncome;
+		private Double anualIncome;
 		
 		public Person() {
 			super();
@@ -15,8 +15,8 @@ public abstract class Person {
 			this.anualIncome = anualIncome;
 		}
 		
-		public String finalTax() { 
-			return "$" + anualIncome;
+		public Double finalTax() { 
+			return anualIncome;
 		}
 		
 		public String getName() {

@@ -18,19 +18,19 @@ public class Individual extends Person {
 	}
 	
 	@Override
-	public String finalTax() {
+	public Double finalTax() {
 		if(this.getAnualIncome() < 20000) { 
 			if(this.healthExpenditure > 0) { 
-				return this.name + ": $" + ((this.getAnualIncome() * 0.15) - this.healthExpenditure * 0.5); 
+				return this.getAnualIncome() * 0.15 - this.healthExpenditure * 0.5; 
 			} else {
-				return this.name + ": $" + ((this.getAnualIncome() * 0.15)); 
+				return this.getAnualIncome() * 0.15; 
 			}
 		}
 	
 		if(this.healthExpenditure > 0) { 
-			return this.name + ": $" + ((this.getAnualIncome() * 0.25) - this.healthExpenditure * 0.5); 
+			return this.getAnualIncome() * 0.25 - this.healthExpenditure * 0.5; 
 		} else {
-			return this.name + ": $" + ((this.getAnualIncome() * 0.25)); 
+			return this.getAnualIncome() * 0.25; 
 		}
 	}
 }
