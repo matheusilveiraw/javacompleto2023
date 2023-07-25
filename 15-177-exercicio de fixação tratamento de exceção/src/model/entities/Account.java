@@ -7,6 +7,14 @@ public class Account {
 	private Double balance;
 	private Double withdrawLimit;
 	
+	public String canWithdraw(Double withdrawAmount, Double limit) {
+		if(withdrawAmount < limit)  {
+			return "New balance: " + (this.balance - withdrawAmount);
+		} else { 
+			return "Withdraw error: the amount exceeds withdraw limit!";
+		} 
+	}
+	
 	public Account(Integer number, String holder, Double balance, Double withdrawLimit) {
 		super();
 		this.number = number;
