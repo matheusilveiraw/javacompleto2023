@@ -1,5 +1,7 @@
 package model.entities;
 
+import model.exception.ValueException;
+
 public class Account {
 	
 	private Integer number;
@@ -7,11 +9,16 @@ public class Account {
 	private Double balance;
 	private Double withdrawLimit;
 	
-	public String canWithdraw(Double withdrawAmount, Double limit) {
+	public void canWithdraw(Double withdrawAmount, Double limit) throws ValueException {
 		if(withdrawAmount < limit)  {
-			return "New balance: " + (this.balance - withdrawAmount);
+			if(this.balance > withdrawAmount) {
+//				System.out.println("New balance: " + (this.balance - withdrawAmount)); //parece errado dar o systout aqui 
+				this.balance -= withdrawAmount;
+			} else { 
+				throw new ValueException("Not enough balance!");
+			}
 		} else { 
-			return "Withdraw error: the amount exceeds withdraw limit!";
+			throw new ValueException("The amount exceeds withdraw limit!");
 		} 
 	}
 	
@@ -43,15 +50,7 @@ public class Account {
 		return balance;
 	}
 
-	public void setBalance(Double balance) {
-		this.balance = balance;
-	}
-
 	public Double getWithdrawLimit() {
 		return withdrawLimit;
-	}
-
-	public void setWithdrawLimit(Double withdrawLimit) {
-		this.withdrawLimit = withdrawLimit;
 	}
 }

@@ -4,10 +4,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import model.entities.Account;
+import model.exception.ValueException;
 
 public class Program {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ValueException {
 		Scanner sc = new Scanner(System.in); 
 		
 		try {
@@ -27,15 +28,14 @@ public class Program {
 			System.out.print("Enter amount for withdraw: ");
 			double withdrawAmount = sc.nextDouble();
 						
-			System.out.println(conta.canWithdraw(withdrawAmount, limit));
+			conta.canWithdraw(withdrawAmount, limit);
+			System.out.println("Novo saldo: " + conta.getBalance());
 			
 		} catch(InputMismatchException e) { 
-			System.out.println("Erro: insira os dados de forma correta!");
-		} 
-		
-
-		
-		
+			System.out.println("Erro: " + e.getMessage());
+		} catch (ValueException e) { 
+			System.out.println("Withdraw error: " + e.getMessage());
+		}
 		
 		sc.close();
 	}
