@@ -8,7 +8,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		File file = new File("c:\\temp\\in.txt");
+		File file = new File("c:\\temp\\exerproposot\\entrada.txt");
 		
 		Scanner sc = null;
 		
@@ -24,7 +24,5 @@ public class Program {
 				sc.close();	
 			}
 		}
-		
-		
 	}
 }
