@@ -33,6 +33,26 @@ public class AluguelCarro {
 	}
 
 
+	public Veiculo getVeiculo() {
+		return veiculo;
+	}
+
+
+	public void setVeiculo(Veiculo veiculo) {
+		this.veiculo = veiculo;
+	}
+
+
+	public Fatura getFatura() {
+		return fatura;
+	}
+
+
+	public void setFatura(Fatura fatura) {
+		this.fatura = fatura;
+	}
+
+
 	public void setFinish(LocalDateTime finish) {
 		this.finish = finish;
 	}
