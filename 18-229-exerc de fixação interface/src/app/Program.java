@@ -37,7 +37,7 @@ public class Program {
 		contractService.processContract(obj, n);
 		
 		for(Installment installment : obj.getInstalments()) { 
-			System.out.println(installment);
+			System.out.println(installment);   
 		}
 		
 		
