@@ -29,7 +29,7 @@ public class Program {
 		
 		Contract obj = new Contract(number, date, totalValue);
 		
-		System.out.print("Número de parcelas: ");
+		System.out.print("Número de parcelas: "); 
 		int n = sc.nextInt();
 		
 		ContractService contractService = new ContractService(new PaypalService());
