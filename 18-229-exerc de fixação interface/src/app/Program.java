@@ -20,21 +20,21 @@ public class Program {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		
 		System.out.println("Entre os dados do contrato: ");
-		System.out.print("Numero: ");
+		System.out.print("Numero: "); 
 		int number = sc.nextInt();
 		System.out.print("Data (dd/MM/yyyy): ");
 		LocalDate date = LocalDate.parse(sc.next(), fmt);
 		System.out.print("Valor do Contrato: ");
 		double totalValue = sc.nextDouble();
 		
-		Contract obj = new Contract(number, date, totalValue);
+		Contract obj = new Contract(number, date, totalValue);  
 		
 		System.out.print("Número de parcelas: "); 
 		int n = sc.nextInt();
 		
 		ContractService contractService = new ContractService(new PaypalService());
 		
-		contractService.processContract(obj, n);
+		contractService.processContract(obj, n);  
 		
 		for(Installment installment : obj.getInstalments()) { 
 			System.out.println(installment);   

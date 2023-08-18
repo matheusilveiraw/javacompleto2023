@@ -14,7 +14,7 @@ public class Installment { //parcelas
 	
 	public Installment(LocalDate date, Double amount) {
 		this.date = date;
-		this.amount = amount;
+		this.amount = amount; 
 	}
 
 	public LocalDate getDate() {
