@@ -1,5 +1,6 @@
 package app;
 
+import devices.ComboDevice;
 import devices.ConcretePrinter;
 import devices.ConcreteScanner;
 
@@ -16,5 +17,10 @@ public class Program {
 		s.processoDoc("My email");
 		System.out.println("Scan result: " + s.scan());
 		
+		ComboDevice c = new ComboDevice("2081");
+		c.processoDoc("My dissertation");
+		c.print("My dissertation");
+		
+		System.out.println("Scan result " + c.scan());
 	}
 }
