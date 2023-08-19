@@ -13,7 +13,7 @@ public class Program {
 		//aula 234
 		List<String> list = new ArrayList<>();
 		
-		String path = "C:\\temp\\in.txt";
+		String path = "C:\\temp\\aula234\\in.txt";
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String name = br.readLine();
