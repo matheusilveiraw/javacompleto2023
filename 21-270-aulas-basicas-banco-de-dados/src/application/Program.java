@@ -2,6 +2,7 @@ package application;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import db.DB;
@@ -17,11 +18,18 @@ public class Program {
 			
 			st = conn.createStatement();
 			
-			st.executeQuery("select * from department");
+			rs = st.executeQuery("select * from department");
 			
-			
-		} catch () { 
-			
+		
+			while(rs.next()) { 
+				System.out.println(rs.getInt("Id") + "-" + rs.getString("Name"));
+			}
+		} catch (SQLException e) { 
+			e.printStackTrace();
+		} finally {
+			DB.closeStatement(st);
+			DB.closeResultSet(rs);
+			DB.closeConnection();
 		}
 	}
 }
